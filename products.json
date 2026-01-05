@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Luxury Bed Sheet",
+    "description": "High-quality bed sheet available on pre-order",
+    "image": "images/bedding1.jpg",
+    "category": "beddings",
+    "whatsappMessage": "Hello, I want to pre-order the Luxury Bed Sheet from Star-Zane Beddings & Fashion Hub."
+  },
+  {
+    "name": "Duvet Set",
+    "description": "Soft and cozy duvet available on pre-order",
+    "image": "images/bedding2.jpg",
+    "category": "beddings",
+    "whatsappMessage": "Hello, I want to pre-order the Duvet Set from Star-Zane Beddings & Fashion Hub."
+  },
+  {
+    "name": "Luxury Bed Sheet",
+    "description": "Stylish fashion item available on pre-order",
+    "image": "images/bedding3.jpg",
+    "category": "beddings",
+    "whatsappMessage": "Hello, I want to pre-order the Fashion Outfit from Star-Zane Beddings & Fashion Hub."
+  },
+  {
+    "name": "Fashion Outfit",
+    "description": "Stylish fashion item available on pre-order",
+    "image": "images/bedding4.jpg",
+    "category": "beddings",
+    "whatsappMessage": "Hello, I want to pre-order the Fashion Outfit from Star-Zane Beddings & Fashion Hub."
+  },
+  {
+    "name": "Fashion Outfit",
+    "description": "Stylish fashion item available on pre-order",
+    "image": "images/fashion2.jpg",
+    "category": "fashion",
+    "whatsappMessage": "Hello, I want to pre-order the Fashion Outfit from Star-Zane Beddings & Fashion Hub."
+  },
+  {
+    "name": "Fashion Outfit",
+    "description": "Stylish fashion item available on pre-order",
+    "image": "images/fashion3.jpg",
+    "category": "fashion",
+    "whatsappMessage": "Hello, I want to pre-order the Fashion Outfit from Star-Zane Beddings & Fashion Hub."
+  },
+  {
+    "name": "Fashion Outfit",
+    "description": "Stylish fashion item available on pre-order",
+    "image": "images/fashion4.jpg",
+    "category": "fashion",
+    "whatsappMessage": "Hello, I want to pre-order the Fashion Outfit from Star-Zane Beddings & Fashion Hub."
+  },
+  {
+    "name": "Fashion Outfit",
+    "description": "Stylish fashion item available on pre-order",
+    "image": "images/fashion5.jpeg",
+    "category": "fashion",
+    "whatsappMessage": "Hello, I want to pre-order the Fashion Outfit from Star-Zane Beddings & Fashion Hub."
+  },
+  {
+    "name": "Fashion Outfit",
+    "description": "Stylish fashion item available on pre-order",
+    "image": "images/fashion1.jpg",
+    "category": "fashion",
+    "whatsappMessage": "Hello, I want to pre-order the Fashion Outfit from Star-Zane Beddings & Fashion Hub."
+  }
+]
