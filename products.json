@@ -15,6 +15,62 @@
   },
   {
     "name": "Luxury Bed Sheet",
+    "description": "High-quality bed sheet available on pre-order",
+    "image": "images/newbed11.jpeg",
+    "category": "beddings",
+    "whatsappMessage": "Hello, I want to pre-order the Luxury Bed Sheet from Star-Zane Beddings & Fashion Hub."
+  },
+  {
+    "name": "Luxury Bed Sheet",
+    "description": "High-quality bed sheet available on pre-order",
+    "image": "images/newbed2.jpeg",
+    "category": "beddings",
+    "whatsappMessage": "Hello, I want to pre-order the Luxury Bed Sheet from Star-Zane Beddings & Fashion Hub."
+  },
+  {
+    "name": "Luxury Bed Sheet",
+    "description": "High-quality bed sheet available on pre-order",
+    "image": "images/newbed3.jpeg",
+    "category": "beddings",
+    "whatsappMessage": "Hello, I want to pre-order the Luxury Bed Sheet from Star-Zane Beddings & Fashion Hub."
+  },
+  {
+    "name": "Luxury Bed Sheet",
+    "description": "High-quality bed sheet available on pre-order",
+    "image": "images/newbed4.jpeg",
+    "category": "beddings",
+    "whatsappMessage": "Hello, I want to pre-order the Luxury Bed Sheet from Star-Zane Beddings & Fashion Hub."
+  },
+  {
+    "name": "Luxury Bed Sheet",
+    "description": "High-quality bed sheet available on pre-order",
+    "image": "images/newbed5.jpeg",
+    "category": "beddings",
+    "whatsappMessage": "Hello, I want to pre-order the Luxury Bed Sheet from Star-Zane Beddings & Fashion Hub."
+  },
+  {
+    "name": "Luxury Bed Sheet",
+    "description": "High-quality bed sheet available on pre-order",
+    "image": "images/newbed6.jpeg",
+    "category": "beddings",
+    "whatsappMessage": "Hello, I want to pre-order the Luxury Bed Sheet from Star-Zane Beddings & Fashion Hub."
+  },
+  {
+    "name": "Luxury Bed Sheet",
+    "description": "High-quality bed sheet available on pre-order",
+    "image": "images/newbed7.jpeg",
+    "category": "beddings",
+    "whatsappMessage": "Hello, I want to pre-order the Luxury Bed Sheet from Star-Zane Beddings & Fashion Hub."
+  },
+  {
+    "name": "Luxury Bed Sheet",
+    "description": "High-quality bed sheet available on pre-order",
+    "image": "images/newbed8.jpeg",
+    "category": "beddings",
+    "whatsappMessage": "Hello, I want to pre-order the Luxury Bed Sheet from Star-Zane Beddings & Fashion Hub."
+  },
+  {
+    "name": "Luxury Bed Sheet",
     "description": "Stylish fashion item available on pre-order",
     "image": "images/bedding3.jpg",
     "category": "beddings",
@@ -23,7 +79,7 @@
   {
     "name": "Fashion Outfit",
     "description": "Stylish fashion item available on pre-order",
-    "image": "images/bedding4.jpg",
+    "image": "images/newbed9.jpeg",
     "category": "beddings",
     "whatsappMessage": "Hello, I want to pre-order the Fashion Outfit from Star-Zane Beddings & Fashion Hub."
   },
