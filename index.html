@@ -8,113 +8,84 @@
 </head>
 <body>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Star-Zane Beddings & Fashion Hub</h1>
-
+      <h1>Quality Beddings & Fashion You’ll Love</h1>
       <p class="hero-text">
-        Quality beddings and fashion items available on pre-order.
+        Pre-order premium bed sheets, duvets and fashion items at affordable prices.
       </p>
-
-      <a 
-        href="https://wa.me/2348108634348" 
-        class="hero-btn" 
-        target="_blank"
-      >
-        Order via WhatsApp
-      </a>
+      <a href="#products" class="hero-btn">Order via WhatsApp</a>
     </div>
   </section>
 
-  <div class="filter-buttons">
-  <button data-category="all" class="active">All</button>
-  <button data-category="beddings">Beddings</button>
-  <button data-category="fashion">Fashion</button>
-</div>
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <h2>Available Pre-Order Items</h2>
 
-<!-- PRODUCTS / COLLECTIONS SECTION -->
-<section class="products">
-  <h2>Our Products</h2>
-  <div id="product-grid" class="product-grid">
-    <!-- Products will be inserted here dynamically -->
+    <!-- FILTER (optional, works if category exists) -->
+    <div class="filter-buttons">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="beddings">Beddings</button>
+      <button data-filter="fashion">Fashion</button>
+    </div>
+
+    <!-- LOADING -->
+    <div id="loading">Loading products...</div>
+
+    <!-- PRODUCT GRID -->
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works">
+    <h2>How Pre-Order Works</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <h3>1. Choose Product</h3>
+        <p>Browse available items and select what you like.</p>
+      </div>
+      <div class="step-card">
+        <h3>2. Order via WhatsApp</h3>
+        <p>Click the order button to chat instantly.</p>
+      </div>
+      <div class="step-card">
+        <h3>3. Delivery</h3>
+        <p>We source and deliver your item to you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <h2>What Customers Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>Very neat bedding and fast delivery.</p>
+        <h4>— Sarah</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>Affordable and reliable seller.</p>
+        <h4>— James</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2>Ready to Order?</h2>
+    <p>Click below to place your pre-order now.</p>
+    <a href="https://wa.me/2349032020918" class="contact-btn" target="_blank">
+      Order via WhatsApp
+    </a>
+  </section>
+
+  <!-- IMAGE MODAL -->
+  <div class="image-modal" id="imageModal">
+    <span class="close-modal" id="closeModal">&times;</span>
+    <img id="modalImage" />
   </div>
-</section>
 
-<div id="product-grid" class="product-grid"></div>
-
-</div>
-
-  </div>
-</section>
-
-<!-- HOW PRE-ORDER WORKS SECTION -->
-<section class="how-it-works">
-  <h2>How Pre-Order Works</h2>
-  <div class="steps-grid">
-
-    <div class="step-card">
-      <h3>Step 1: Choose Product</h3>
-      <p>Browse our collection of beddings and fashion items to find what you love.</p>
-    </div>
-
-    <div class="step-card">
-      <h3>Step 2: Place Pre-Order</h3>
-      <p>Click the “Pre-Order Now” button and send your order via WhatsApp.</p>
-    </div>
-
-    <div class="step-card">
-      <h3>Step 3: We Source It</h3>
-      <p>We find the best quality product and prepare it for delivery.</p>
-    </div>
-
-    <div class="step-card">
-      <h3>Step 4: Delivery</h3>
-      <p>We deliver the product to your door, hassle-free.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- TESTIMONIALS / SOCIAL PROOF SECTION -->
-<section class="testimonials">
-  <h2>What Our Customers Say</h2>
-  <div class="testimonials-grid">
-
-    <div class="testimonial-card">
-      <p>"The bed sheet I pre-ordered was amazing! Fast delivery and great quality."</p>
-      <h4>- Sarah L.</h4>
-    </div>
-
-    <div class="testimonial-card">
-      <p>"I love the fashion outfits from Star-Zane. Stylish and affordable."</p>
-      <h4>- James O.</h4>
-    </div>
-
-    <div class="testimonial-card">
-      <p>"Pre-ordering was easy and smooth. I will definitely order again."</p>
-      <h4>- Ada E.</h4>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT / WHATSAPP SECTION -->
-<section class="contact">
-  <h2>Place Your Pre-Order</h2>
-  <p>Have questions or ready to order? Send us a message on WhatsApp now!</p>
-  <a href="https://wa.me/2348108634348" class="contact-btn" target="_blank">
-    Order via WhatsApp
-  </a>
-</section>
-
-<!-- IMAGE MODAL -->
-<div id="image-modal" class="image-modal">
-  <span class="close-modal">&times;</span>
-  <img id="modal-image" src="" alt="Product preview">
-</div>
-
-<script src="app.js"></script>
-
+  <script src="app.js"></script>
 </body>
 </html>

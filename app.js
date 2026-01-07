@@ -1,90 +1,81 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const productGrid = document.getElementById("product-grid");
-  const filterButtons = document.querySelectorAll(".filter-buttons button");
+const productGrid = document.getElementById("productGrid");
+const loadingText = document.getElementById("loading");
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const closeModal = document.getElementById("closeModal");
+const filterButtons = document.querySelectorAll(".filter-buttons button");
 
-  // MODAL ELEMENTS
-  const modal = document.getElementById("image-modal");
-  const modalImage = document.getElementById("modal-image");
-  const closeModal = document.querySelector(".close-modal");
+const whatsappNumber = "2348108634348";
+let allProducts = [];
 
-  const whatsappNumber = "2348108634348";
-  let allProducts = [];
-
-  // FETCH PRODUCTS
-  fetch("products.json")
-    .then(response => response.json())
-    .then(products => {
-      allProducts = products;
-      displayProducts("all");
-    })
-    .catch(error => console.error("Error loading products:", error));
-
-  // DISPLAY PRODUCTS
-  function displayProducts(category) {
-    productGrid.innerHTML = "";
-
-    const filteredProducts =
-      category === "all"
-        ? allProducts
-        : allProducts.filter(p => p.category === category);
-
-    filteredProducts.forEach(product => {
-      const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-        product.whatsappMessage
-      )}`;
-
-      const card = document.createElement("div");
-      card.className = "product-card";
-
-      card.innerHTML = `
-        <img 
-          src="${product.image}" 
-          alt="${product.name}" 
-          class="product-image"
-        >
-        <h3>${product.name}</h3>
-        <p>${product.description}</p>
-        <a 
-          href="${whatsappLink}" 
-          class="product-btn" 
-          target="_blank"
-        >
-          Order via WhatsApp
-        </a>
-      `;
-
-      // IMAGE MODAL LOGIC
-      const img = card.querySelector(".product-image");
-      img.addEventListener("click", () => {
-        modal.style.display = "flex";
-        modalImage.src = product.image;
-        modalImage.alt = product.name;
-      });
-
-      productGrid.appendChild(card);
-    });
-  }
-
-  // FILTER BUTTONS
-  filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      document
-        .querySelector(".filter-buttons .active")
-        .classList.remove("active");
-
-      button.classList.add("active");
-      displayProducts(button.dataset.category);
-    });
+/* FETCH PRODUCTS */
+fetch("products.json?v=" + Date.now())
+  .then(res => res.json())
+  .then(data => {
+    allProducts = data;
+    renderProducts(allProducts);
+    loadingText.style.display = "none";
+  })
+  .catch(err => {
+    loadingText.textContent = "Failed to load products.";
+    console.error("Error loading products:", err);
   });
 
-  // CLOSE MODAL
-  closeModal.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
+/* RENDER PRODUCTS */
+function renderProducts(products) {
+  productGrid.innerHTML = "";
 
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
+  products.forEach(product => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+    card.setAttribute("data-category", product.category || "all");
+
+    const message = encodeURIComponent(
+      `Hello, I want to pre-order:\n${product.name}\nPrice: ${product.price}`
+    );
+
+    card.innerHTML = `
+      <img src="${product.image}" alt="${product.name}" loading="lazy" />
+      <h3>${product.name}</h3>
+      <p>${product.price}</p>
+      <a class="product-btn"
+         href="https://wa.me/${whatsappNumber}?text=${message}"
+         target="_blank">
+         Order via WhatsApp
+      </a>
+    `;
+
+    /* IMAGE MODAL */
+    card.querySelector("img").addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = product.image;
+    });
+
+    productGrid.appendChild(card);
+  });
+}
+
+/* MODAL CLOSE */
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+modal.addEventListener("click", e => {
+  if (e.target === modal) modal.style.display = "none";
+});
+
+/* FILTER LOGIC */
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelector(".filter-buttons .active").classList.remove("active");
+    btn.classList.add("active");
+
+    const filter = btn.dataset.filter;
+
+    if (filter === "all") {
+      renderProducts(allProducts);
+    } else {
+      renderProducts(allProducts.filter(p => p.category === filter));
     }
   });
 });
